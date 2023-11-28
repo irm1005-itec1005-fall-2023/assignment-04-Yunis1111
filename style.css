@@ -29,8 +29,8 @@
 */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
- background: radial-gradient(#e63946,#5d0f15);
+  color: #a8dadc;
+ background: radial-gradient(#15255b,#0f5d54);
 }
 
 main {
@@ -54,37 +54,49 @@ main {
   border-width: 0;
 }
 
-#todo-Items {
+#apph1 {
+  align-items: center;
+}
+
+#todoItems {
   flex-grow: 2;
   border-radius: 1rem;
-  border-style: dotted;
-  border-bottom-left-radius: 0px;
+  border-style: none;
   border-bottom-right-radius: 0px;
-  height: 3rem;
+  border-top-right-radius: 0px;
+  height: 1px;
   width: 25rem;
-  padding: 3rem;
+  padding: 1rem;
+  transition-duration: 0.5s;
 }
 
-#addbtn {
-  width: 0.5px;
-  height: 0.5px;
+#todoItems:focus {
+  outline-width: 0px;
+  background-color: #17453e;
+}
+
+#addBtn {
+  width: 10rem;
+  height: 2rem;
   border-radius: 1rem;
   border-style: none;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  transition-duration: 0.5s;
-  background: radial-gradient(#e63946,#5d0f15);
+  margin-left: -1rem;
+  transition-duration: 1.0s;
+  background: linear-gradient(120deg, var(--c1, #ac8c29), var(--c2, #34349f) 51%, var(--c1, rgb(65, 88, 62))) var(--x, 0%)/ 200%;
 }
 
-#addbtn:hover {
-  --x: 200px;
+
+#addBtn:hover {
+  --x: 100%;
 }
 
 .todoAppBox {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 2rem;
+  flex-direction: row;
+  border: 1px;
   border-radius: 1rem;
+  border-style: solid;
+  border-color: #365f99
   gap : 0rem;
 }
+
