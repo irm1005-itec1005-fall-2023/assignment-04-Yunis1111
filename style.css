@@ -108,10 +108,33 @@ main {
   border-color: #17453e;
 }
 
-.ToDoList {
+.todoList {
   align-items: center;
-  width: 32rem;
+  width: 30rem;
   height: 20rem;
   border-style: dashed;
-  margin: 2rem;
+  margin: 3rem;
+}
+
+#todoList-ul {
+  list-style-type: none;
+  margin-left: -1rem;
+  margin-right: 1rem;
+}
+
+.duty-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-style: solid;
+  border-color: #365f99;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  transition-duration: 0.5s;
+}
+
+.todo-li {
+  
 }
