@@ -1,84 +1,20 @@
 <!DOCTYPE html>
-<html lang="en-ca">
-
+<html lang="en">
 <head>
-  <!-- Set the page title -->
-  <title>Assignment 04 - Finishing a Todo List App</title>
-
-  <!-- Set the charset we're using to UTF-8 -->
-  <meta charset="utf-8" />
-
-  <!-- Set the screens default zoom / scale to 1 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Specifies the document mode for Internet Explorer -->
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-  <!-- Set the CSS Reset File -->
-  <link rel="stylesheet" href="./reset.css" />
-
-  <!-- Set the main stylesheet -->
-  <link rel="stylesheet" href="./style.css" />
-
-  <!-- Set the Favicon  -->
-  <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <div class="todo-container">
+        <h1>My To-Do List</h1>
+        <input type="text" id="todo-input" placeholder="Add a new task...">
+        <button id="add-btn">Add</button>
+        <button id="clear-btn">Clear All</button>
+        <ul id="todo-list"></ul>
+    </div>
 
-  <!--
-
-    Assignment 04 - Finishing a Todo List App
-
-    Instructions:
-
-    Important checklist:
-
-    - Are users able to create and delete to do list items?
-    - Have you set a favicon? (included - but it's a rocket)
-    - Has a team member conducted a code review and left a GitHub Issue in your repo?
-    - Have you conducted a code review and left a GitHub Issue on your team member's repo?
-
-  -->
-
-  <main>
-    <div class="app">
-      <h1> MyTodo List</h1>
-
-
-
-      <div>
-        <form class ="todoAppBox">
-          <label for="todoItems"></label>
-          <input type="text" id="todoItems" placeholder="Add a new todo..." required />
-          <input type = "submit" id = "addBtn" value="Add Task " />
-        </form>
-      </div>
-
-      <div class ="todoList">
-        <ul id="todoList-ul">
-
-          <div class="duty-item">
-            <li class="todo-li">Just do it</li>
-            <input type="button" class="duty-delete">
-          </div>
-
-          <div class="duty-item">
-            <li class="todo-li">Another one</li>
-            <input type="button" class="duty-delete">
-          </div>
-
-          <div class="duty-item">
-            <li class="todo-li">And another one</li>
-            <input type="button" class="duty-delete">
-          </div>
-
-        </ul>
-      </div>
-   </div>
-    </main>
-
-  <!-- Add JavaScript File -->
-  <script src="./script.js"></script>
-
+    <script src="/script.js"></script>
 </body>
 </html>

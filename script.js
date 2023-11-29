@@ -1,43 +1,78 @@
-/* Assignment 04: Finishing a Todo List App
- *
- * 
- *
- */
+document.addEventListener('DOMContentLoaded', loadTodos);
+document.getElementById('add-btn').addEventListener('click', addTodo);
+document.getElementById('clear-btn').addEventListener('click', clearTodos);
 
+function addTodo() {
+    let todoInput = document.getElementById('todo-input');
+    let newTodo = todoInput.value.trim();
 
-//
-// Variables
-//
+    if (newTodo) {
+        let listItem = document.createElement('li');
+        listItem.textContent = newTodo;
+        
+        let deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.className = 'delete-btn';
+        deleteBtn.onclick = function() {
+            listItem.remove();
+            saveTodos();
+        };
 
-// Constants
-const appID = "app";
-const headingText = "To do. To done. ✅";
+        listItem.appendChild(deleteBtn);
 
-// DOM Elements
-let appContainer = document.getElementById(appID);
+        listItem.addEventListener('click', function() {
+            listItem.classList.toggle('completed');
+            saveTodos();
+        });
 
-//
-// Functions
-//
-
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
-    return;
-  }
-
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
-
-  // Init complete
-  console.log("App successfully initialised");
+        document.getElementById('todo-list').appendChild(listItem);
+        todoInput.value = '';
+        saveTodos();
+    }
 }
 
-//
-// Inits & Event Listeners
-//
-inititialise();
+function clearTodos() {
+    let todoList = document.getElementById('todo-list');
+    todoList.innerHTML = '';
+    saveTodos();
+}
+
+function loadTodos() {
+    let todos = JSON.parse(localStorage.getItem('todos')) || [];
+    for (let todo of todos) {
+        let listItem = document.createElement('li');
+        listItem.textContent = todo.text;
+
+        let deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.className = 'delete-btn';
+        deleteBtn.onclick = function() {
+            listItem.remove();
+            saveTodos();
+        };
+
+        listItem.appendChild(deleteBtn);
+
+        if (todo.completed) {
+            listItem.classList.add('completed');
+        }
+
+        listItem.addEventListener('click', function() {
+            listItem.classList.toggle('completed');
+            saveTodos();
+        });
+
+        document.getElementById('todo-list').appendChild(listItem);
+    }
+}
+
+function saveTodos() {
+    let todos = [];
+    document.querySelectorAll('#todo-list li').forEach(item => {
+        todos.push({
+            text: item.firstChild.textContent,
+            completed: item.classList.contains('completed')
+        });
+    });
+    localStorage.setItem('todos', JSON.stringify(todos));
+}

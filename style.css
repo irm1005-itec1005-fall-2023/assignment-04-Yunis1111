@@ -1,181 +1,78 @@
-/*
- * CSS File for the solution
- * Assignment 03
- * You can modify these styles but you don't have to
- */
-
-/*
- VARIABLES
-*/
-:root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
-
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
-}
-
-/*
-  PAGE / BODY
-*/
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #a8dadc;
- background: radial-gradient(#15255b,#0f5d54);
+  font-family: Arial, sans-serif;
+  background-color: #e8f4f8; /* Light blue background */
+  text-align: center;
+  padding: 20px;
+  background-image: url(./images/myimages/Assignment\ 4.jpg);
 }
 
-main {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.todo-container {
+  background-color: #ffffff; /* White background for the container */
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-/****** Screen reader text utility clsas *******/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+h1 {
+  color: #2c3e50; /* Dark blue color for the heading */
 }
 
-#apph1 {
-  align-items: center;
+#todo-input {
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #3498db; /* Blue border for the input field */
+  border-radius: 4px;
 }
 
-#todoItems {
-  flex-grow: 2;
-  border-radius: 1rem;
-  border-style: none;
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 0px;
-  height: 1px;
-  width: 25rem;
-  padding: 1rem;
-  transition-duration: 0.5s;
+#add-btn, #clear-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3498db; /* Blue background for buttons */
+  color: white;
+  cursor: pointer;
+  margin: 5px;
 }
 
-#todoItems:focus {
-  outline-width: 0px;
-  background-color: #17453e;
+#add-btn:hover, #clear-btn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
 }
 
-#addBtn {
-  width: 10rem;
-  height: 2rem;
-  border-radius: 1rem;
-  border-style: none;
-  margin-left: -1rem;
-  transition-duration: 1.0s;
-  background: linear-gradient(120deg, var(--c1, #ac8c29), var(--c2, #34349f) 51%, var(--c1, rgb(65, 88, 62))) var(--x, 0%)/ 200%;
-}
-
-
-#addBtn:hover {
-  --x: 100%;
-}
-
-.todoAppBox {
-  display: flex;
-  flex-direction: row;
-  border: 1px;
-  border-radius: 1rem;
-  border-style: solid;
-  border-color: #365f99
-  gap: 0rem;
-}
-
-.todoAppBox:hover {
-  border-color: #17453e;
-}
-
-.todoAppBox:focus {
-  border-color: #17453e;
-}
-
-.todoList {
-  align-items: center;
-  width: 33rem;
-  height: 20rem;
-  border-style: double;
-  border-color: #365f99a5;
-  margin: 2rem;
-}
-
-#todoList-ul {
+ul {
   list-style-type: none;
-  margin-left: -1rem;
-  margin-right: 1rem;
+  padding: 0;
 }
 
-.duty-item {
-  flex-grow: 5;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-style: none;
-  border-color: #365f99;
-  border-radius: 1rem;
-  margin: 0rem;
-  padding: 0rem;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-  width: 30rem;
-  height: 2.4rem;
-  transition-duration: 0.5s;
+li {
+  background-color: #f6f6f6; /* Light grey background for list items */
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
 }
 
-.todo-li {
-  flex-grow: 2;
-  width: 40rem;
-  height: 2.5rem;
-  margin-top: 1rem;
-  margin-right: -2rem;
-  border-radius: 2rem;
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 0px;
-  padding: 0.5rem;
-  padding-left: 1rem;
-  background-color: #3f80a9;
-  border-style: solid;
-  border-color: rgb(47, 47, 123);
-  border-width: 1.8px;
-  transition-duration: 0.3s;
+li.completed {
+  text-decoration: line-through;
+  color: #7f8c8d; /* Grey color for completed tasks */
 }
 
-.todo-li:hover {
-  border-color: var(--colour-aquaisland);
-  background-color: #484848;
-
+.delete-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #e74c3c; /* Red background for delete buttons */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
-.duty-delete {
-  width: 1rem;
-  height: 2.5rem;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  padding: 0.5rem;
-  padding-left: 2rem;
-  border-radius: 2rem;
-  background-color: rgb(210, 86, 48);
-  border-style: solid;
-  border-color: #e63939;
-  background-image:  url("https://img.icons8.com/ios/50/000000/delete-sign--v1.png");
-  background-position: center center;
-  background-size: 2rem;
+.delete-btn:hover {
+  background-color: #c0392b; /* Darker red on hover */
 }
