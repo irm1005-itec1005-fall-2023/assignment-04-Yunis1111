@@ -97,6 +97,21 @@ main {
   border-radius: 1rem;
   border-style: solid;
   border-color: #365f99
-  gap : 0rem;
+  gap: 0rem;
 }
 
+.todoAppBox:hover {
+  border-color: #17453e;
+}
+
+.todoAppBox:focus {
+  border-color: #17453e;
+}
+
+.ToDoList {
+  align-items: center;
+  width: 32rem;
+  height: 20rem;
+  border-style: dashed;
+  margin: 2rem;
+}
