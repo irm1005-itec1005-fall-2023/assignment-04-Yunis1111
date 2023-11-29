@@ -110,10 +110,11 @@ main {
 
 .todoList {
   align-items: center;
-  width: 30rem;
+  width: 33rem;
   height: 20rem;
-  border-style: dashed;
-  margin: 3rem;
+  border-style: double;
+  border-color: #365f99a5;
+  margin: 2rem;
 }
 
 #todoList-ul {
@@ -123,37 +124,58 @@ main {
 }
 
 .duty-item {
+  flex-grow: 5;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  border-style: solid;
+  border-style: none;
   border-color: #365f99;
   border-radius: 1rem;
-  margin: 0.5rem;
-  padding: 0.5rem;
+  margin: 0rem;
+  padding: 0rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  width: 30rem;
+  height: 2.4rem;
   transition-duration: 0.5s;
 }
 
 .todo-li {
   flex-grow: 2;
-  width: 32rem;
+  width: 40rem;
   height: 2.5rem;
   margin-top: 1rem;
+  margin-right: -2rem;
   border-radius: 2rem;
   border-bottom-right-radius: 0px;
   border-top-right-radius: 0px;
   padding: 0.5rem;
   padding-left: 1rem;
-  background-color: #457b9d;
+  background-color: #3f80a9;
+  border-style: solid;
+  border-color: rgb(47, 47, 123);
+  border-width: 1.8px;
+  transition-duration: 0.3s;
+}
+
+.todo-li:hover {
+  border-color: var(--colour-aquaisland);
+  background-color: #484848;
+
 }
 
 .duty-delete {
-  width: 2.5rem;
+  width: 1rem;
   height: 2.5rem;
-  margin-top: 2rem;
-  margin-right: 0rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
   padding: 0.5rem;
-  padding-left: 1rem;
-  border-radius: 1.5rem;
+  padding-left: 2rem;
+  border-radius: 2rem;
+  background-color: rgb(210, 86, 48);
+  border-style: solid;
+  border-color: #e63939;
+  background-image:  url("https://img.icons8.com/ios/50/000000/delete-sign--v1.png");
+  background-position: center center;
+  background-size: 2rem;
 }
