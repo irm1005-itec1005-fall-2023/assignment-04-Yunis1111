@@ -136,5 +136,24 @@ main {
 }
 
 .todo-li {
-  
+  flex-grow: 2;
+  width: 32rem;
+  height: 2.5rem;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  background-color: #457b9d;
+}
+
+.duty-delete {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 2rem;
+  margin-right: 0rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  border-radius: 1.5rem;
 }
