@@ -1,103 +1,112 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #e8f4f8; /* Light blue background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Professional font */
+  background-color: #f4f9fc; 
+  color: #333; 
   text-align: center;
   padding: 20px;
   background-image: url(./images/myimages/Assignment\ 4.jpg);
 }
 
 .todo-container {
-  background-color: #ffffff; /* White background for the container */
+  background-color: #ffffff; 
   max-width: 400px;
-  width: 100%; /* Responsive width */
-  margin: 2rem auto; /* Center the container */
+  width: 100%; 
+  margin: 2rem auto; 
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #e1e1e1; 
 }
 
 h2 {
-  color: #2c3e50; /* Dark blue color for the heading */
+  color: #2c3e50; 
+  font-size: 2rem; 
+  margin-bottom: 1.5rem; 
 }
 
 #todo-input, #add-btn, #clear-btn {
-  width: 100%; /* Full width for better responsiveness */
-  padding: 7px; /* Increased padding for more space */
-  margin-bottom: 10px; /* Added bottom margin for spacing between elements */
-  border-radius: 4px;
+  width: calc(100% - 20px); 
+  padding: 10px 15px; 
+  margin-bottom: 15px; 
+  border-radius: 5px; 
+  font-size: 1rem; 
 }
 
 #todo-input {
-  border: 2px solid #3498db; /* Blue border for the input field */
-  margin-bottom: 20px; /* More space below the input field */
+  border: 2px solid #3498db; 
+  margin-bottom: 20px; 
 }
 
 #add-btn, #clear-btn {
   border: none;
-  background-color: #3498db; /* Blue background for buttons */
+  background-color: #3498db; 
   color: white;
   cursor: pointer;
+  font-weight: bold; 
 }
 
 #add-btn:hover, #clear-btn:hover {
-  background-color: #2980b9; /* Darker blue on hover */
+  background-color: #2980b9; 
 }
-
 
 ul {
   list-style-type: none;
   padding: 0;
+  margin-top: 20px; 
 }
 
 li {
-  background-color: #f6f6f6; /* Light grey background for list items */
-  margin-top: 10px;
-  padding: 10px;
+  background-color: #f9f9f9; 
+  margin-top: 8px; 
+  padding: 12px; 
   border-radius: 4px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
 }
 
 .completed {
   text-decoration: line-through;
-  color: #7f8c8d; /* Grey color for completed tasks */
+  color: #7f8c8d; 
 }
 
 button {
-  padding: 5px 10px;
+  padding: 6px 12px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s; 
 }
 
 .delete-btn {
-  background-color: #e74c3c; /* Red background for delete buttons */
+  background-color: #e74c3c; 
   color: white;
 }
 
 .delete-btn:hover {
-  background-color: #c0392b; /* Darker red on hover */
+  background-color: #c0392b; 
 }
 
 .completed-btn {
-  background-color: #2ecc71; /* Green background */
+  background-color: #2ecc71; 
   color: white;
 }
 
 .completed-btn:hover {
-  background-color: #27ae60; /* Darker green on hover */
+  background-color: #27ae60; 
 }
 
 /* Media Query for smaller devices */
 @media screen and (max-width: 600px) {
   .todo-container {
       margin: 1rem auto;
+      padding: 15px;
   }
 
   h2 {
-      font-size: 1.5rem;
+      font-size: 1.8rem; 
   }
 }
