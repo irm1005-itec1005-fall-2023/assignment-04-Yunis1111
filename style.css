@@ -1,10 +1,12 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Professional font */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
   background-color: #f4f9fc; 
   color: #333; 
   text-align: center;
   padding: 20px;
   background-image: url(./images/myimages/Assignment\ 4.jpg);
+  background-size: cover; 
+  background-position: center; 
 }
 
 .todo-container {
