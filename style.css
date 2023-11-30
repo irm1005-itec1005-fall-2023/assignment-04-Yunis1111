@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #20a8d5; /* Light blue background */
+  background-color: #e8f4f8; /* Light blue background */
   text-align: center;
   padding: 20px;
   background-image: url(./images/myimages/Assignment\ 4.jpg);
@@ -8,38 +8,41 @@ body {
 
 .todo-container {
   background-color: #ffffff; /* White background for the container */
-  width: 300px;
-  margin: auto;
+  max-width: 400px;
+  width: 100%; /* Responsive width */
+  margin: 2rem auto; /* Center the container */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+h2 {
   color: #2c3e50; /* Dark blue color for the heading */
 }
 
-#todo-input {
-  width: 70%;
-  padding: 10px;
-  margin-right: 10px;
-  border: 2px solid #3498db; /* Blue border for the input field */
+#todo-input, #add-btn, #clear-btn {
+  width: 100%; /* Full width for better responsiveness */
+  padding: 7px; /* Increased padding for more space */
+  margin-bottom: 10px; /* Added bottom margin for spacing between elements */
   border-radius: 4px;
 }
 
+#todo-input {
+  border: 2px solid #3498db; /* Blue border for the input field */
+  margin-bottom: 20px; /* More space below the input field */
+}
+
 #add-btn, #clear-btn {
-  padding: 10px 15px;
   border: none;
-  border-radius: 4px;
   background-color: #3498db; /* Blue background for buttons */
   color: white;
   cursor: pointer;
-  margin: 5px;
 }
 
 #add-btn:hover, #clear-btn:hover {
   background-color: #2980b9; /* Darker blue on hover */
 }
+
 
 ul {
   list-style-type: none;
@@ -51,28 +54,50 @@ li {
   margin-top: 10px;
   padding: 10px;
   border-radius: 4px;
-  cursor: pointer;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-li.completed {
+.completed {
   text-decoration: line-through;
   color: #7f8c8d; /* Grey color for completed tasks */
 }
 
-.delete-btn {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #e74c3c; /* Red background for delete buttons */
-  color: white;
+button {
+  padding: 5px 10px;
   border: none;
   border-radius: 4px;
-  padding: 5px 10px;
   cursor: pointer;
+  margin-left: 5px;
+}
+
+.delete-btn {
+  background-color: #e74c3c; /* Red background for delete buttons */
+  color: white;
 }
 
 .delete-btn:hover {
   background-color: #c0392b; /* Darker red on hover */
+}
+
+.completed-btn {
+  background-color: #2ecc71; /* Green background */
+  color: white;
+}
+
+.completed-btn:hover {
+  background-color: #27ae60; /* Darker green on hover */
+}
+
+/* Media Query for smaller devices */
+@media screen and (max-width: 600px) {
+  .todo-container {
+      margin: 1rem auto;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
 }
