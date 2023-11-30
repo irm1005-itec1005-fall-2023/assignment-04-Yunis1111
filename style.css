@@ -4,9 +4,7 @@ body {
   color: #333; 
   text-align: center;
   padding: 20px;
-  background-image: url(./images/myimages/Assignment\ 4.jpg);
-  background-size: cover; 
-  background-position: center; 
+  background-image: url(./images/myimages/Assignment\ 4.jpg); 
 }
 
 .todo-container {
@@ -101,7 +99,6 @@ button {
   background-color: #27ae60; 
 }
 
-/* Media Query for smaller devices */
 @media screen and (max-width: 600px) {
   .todo-container {
       margin: 1rem auto;
