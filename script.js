@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', loadTodos);
 document.getElementById('add-btn').addEventListener('click', addTodo);
 document.getElementById('clear-btn').addEventListener('click', clearTodos);
+
 function addTodo() {
     let todoInput = document.getElementById('todo-input');
     let newTodo = todoInput.value.trim();
