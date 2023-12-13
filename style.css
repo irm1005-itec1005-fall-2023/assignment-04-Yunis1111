@@ -1,56 +1,111 @@
-/*
- * CSS File for the solution
- * Assignment 03
- * You can modify these styles but you don't have to
- */
-
-/*
- VARIABLES
-*/
-:root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
-
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
-}
-
-/*
-  PAGE / BODY
-*/
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  background-color: #f4f9fc; 
+  color: #333; 
+  text-align: center;
+  padding: 20px;
+  background-image: url(./images/myimages/Assignment\ 4.jpg); 
 }
 
-main {
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.todo-container {
+  background-color: #ffffff; 
+  max-width: 400px;
+  width: 100%; 
+  margin: 2rem auto; 
+  padding: 20px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #e1e1e1; 
 }
 
+h2 {
+  color: #2c3e50; 
+  font-size: 2rem; 
+  margin-bottom: 1.5rem; 
+}
 
-/****** Screen reader text utility clsas *******/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
+#todo-input, #add-btn, #clear-btn {
+  width: calc(100% - 20px); 
+  padding: 10px 15px; 
+  margin-bottom: 15px; 
+  border-radius: 5px; 
+  font-size: 1rem; 
+}
+
+#todo-input {
+  border: 2px solid #3498db; 
+  margin-bottom: 20px; 
+}
+
+#add-btn, #clear-btn {
+  border: none;
+  background-color: #3498db; 
+  color: white;
+  cursor: pointer;
+  font-weight: bold; 
+}
+
+#add-btn:hover, #clear-btn:hover {
+  background-color: #2980b9; 
+}
+
+ul {
+  list-style-type: none;
   padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+  margin-top: 20px; 
+}
+
+li {
+  background-color: #f9f9f9; 
+  margin-top: 8px; 
+  padding: 12px; 
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #7f8c8d; 
+}
+
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s; 
+}
+
+.delete-btn {
+  background-color: #e74c3c; 
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b; 
+}
+
+.completed-btn {
+  background-color: #2ecc71; 
+  color: white;
+}
+
+.completed-btn:hover {
+  background-color: #27ae60; 
+}
+
+@media screen and (max-width: 600px) {
+  .todo-container {
+      margin: 1rem auto;
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 1.8rem; 
+  }
 }

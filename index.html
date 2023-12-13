@@ -1,51 +1,34 @@
 <!DOCTYPE html>
-<html lang="en-ca">
-
+<html lang="en">
 <head>
-  <!-- Set the page title -->
-  <title>Assignment 04 - Finishing a Todo List App</title>
-
-  <!-- Set the charset we're using to UTF-8 -->
-  <meta charset="utf-8" />
-
-  <!-- Set the screens default zoom / scale to 1 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Specifies the document mode for Internet Explorer -->
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-  <!-- Set the CSS Reset File -->
+      <!-- Set the CSS Reset File -->
   <link rel="stylesheet" href="./reset.css" />
 
   <!-- Set the main stylesheet -->
   <link rel="stylesheet" href="./style.css" />
+    <!-- Set the screens default zoom / scale to 1 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Set the Favicon  -->
-  <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+  <!-- Specifies the document mode for Internet Explorer -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>To-Do List</title>
 </head>
 <body>
-
-  <!--
-
-    Assignment 04 - Finishing a Todo List App
-
-    Instructions:
-
-    Important checklist:
-
-    - Are users able to create and delete to do list items?
-    - Have you set a favicon? (included - but it's a rocket)
-    - Has a team member conducted a code review and left a GitHub Issue in your repo?
-    - Have you conducted a code review and left a GitHub Issue on your team member's repo?
-
-  -->
-
-  <main>
-    <div id="app"></div>
-  </main>
-
-  <!-- Add JavaScript File -->
-  <script src="./script.js"></script>
-
+    <div class="todo-container">
+        <h2>My To-Do List</h2>
+        <input type="text" id="todo-input" placeholder="Add a new task...">
+        <button id="add-btn">Add</button>
+        <button id="clear-btn">Clear All</button>
+        <ul id="todo-list"></ul>
+    </div>
 </body>
 </html>
+
+ <!-- Add JavaScript File -->
+ <script src="./script.js"></script>
+<!--
+ 
+Citations
+https://chat.openai.com/c/f523cf29-8b5c-4024-8af3-adf43ad5d7c8
+ 
+-->
